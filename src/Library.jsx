@@ -1,6 +1,5 @@
-import React from "react";
-import LibraryContextProvider from "./LibraryContextProvider";
 import { Books } from "./Books";
+import { LibraryContextProvider } from "./LibraryContext";
 
 function Library() {
   return (
