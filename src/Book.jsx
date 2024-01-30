@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { LibraryContext } from "./LibraryContext";
 
 export const Book = ({ book }) => {
@@ -20,4 +20,3 @@ export const Book = ({ book }) => {
     </>
   );
 };
-

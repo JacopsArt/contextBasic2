@@ -1,21 +1,13 @@
-import React, { useContext } from "react";
-import { Book } from "./Book";
+import { useContext } from "react";
 import { LibraryContext } from "./LibraryContext";
+import { Category } from "./Category";
 
 export const Books = () => {
-  const { books, borrowBook, returnBook } = useContext(LibraryContext);
-
+  const { books } = useContext(LibraryContext);
   return (
     <>
       <h2>Books ({books.length}):</h2>
-      {books.map((book) => (
-        <Book
-          key={book.id}
-          book={book}
-          borrowBook={borrowBook}
-          returnBook={returnBook}
-        />
-      ))}
+      <Category title="Programming" category="programming" />
     </>
   );
 };

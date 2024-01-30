@@ -5,21 +5,18 @@ import { LibraryContext } from "./LibraryContext";
 
 function Library() {
   const [books, setBooks] = useState(collection.books);
-  
   const borrowBook = (id) => {
     const newBooks = books.map((book) =>
       book.id === id ? { ...book, available: false } : book
     );
-    setBooks(newBooks);
+    return setBooks(newBooks);
   };
-
   const returnBook = (id) => {
     const newBooks = books.map((book) =>
       book.id === id ? { ...book, available: true } : book
     );
-    setBooks(newBooks);
+    return setBooks(newBooks);
   };
-
   return (
     <div className="App">
       <h1>Library</h1>
