@@ -1,3 +1,5 @@
 import { createContext } from 'react';
 
-export const LibraryContext = createContext({});
+export const LibraryContext = createContext({
+  defaultName: 'LibraryContext',
+});
